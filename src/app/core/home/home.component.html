@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title fs-1">
+        {{ singleBrewery.name }} &nbsp;
+        <i class="fa fa-pagelines fa-2x me-5" aria-hidden="true"></i>
+      </h5>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0 fs-3 text-center">
+        <p class="text-break">
+          With the desire to give all lovers of good taste maximum pleasure and
+          a feeling that lasts, the idea was turned into action. "Craft" is the
+          skill and art of making authentic taste. The acquired experience and
+          knowledge was used for the perfect combination of making traditional
+          and innovative recipes that make our beers recognizable and unique.
+        </p>
+        <p class="text-break">
+          A craft brewery or microbrewery is a brewery that produces small
+          amounts of beer, typically less than large breweries, and is often
+          independently owned. Such breweries are generally perceived and
+          marketed as having an emphasis on enthusiasm, new flavours, and varied
+          brewing techniques. The microbrewing movement began in both the United
+          States and United Kingdom in the 1970s, although traditional artisanal
+          brewing existed in Europe for centuries and subsequently spread to
+          other countries. As the movement grew, and some breweries expanded
+          their production and distribution, the more encompassing concept of
+          craft brewing emerged. A brewpub is a pub that brews its own beer for
+          sale on the premises.
+        </p>
+
+        <footer class="blockquote-footer fs-5">
+          <p class="text-break">
+            Our city location:{{ singleBrewery.postal_code }},
+            {{ singleBrewery.city }}
+          </p>
+          <p class="text-break">Country: {{ singleBrewery.country }}</p>
+          <p class="text-break">Street: {{ singleBrewery.street }}</p>
+          <p class="text-break">State: {{ singleBrewery.state }}</p>
+          <small class="card-text">
+            Please dont dring and text: &nbsp;
+            <i class="fa fa-comment-o" aria-hidden="true"></i> &nbsp;
+            {{
+              singleBrewery.website_url.slice(
+                7,
+                singleBrewery.website_url.length
+              )
+            }}
+          </small>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d126704.62306914243!2d-84.39495356392855!3d39.172641965981036!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ssr!2srs!4v1658827337830!5m2!1ssr!2srs"
+          width="100%"
+          height="650"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>

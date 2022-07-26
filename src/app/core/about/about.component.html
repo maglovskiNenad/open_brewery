@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center">
+  <div class="row g-4 align-items-center">
+    <div class="col-auto">
+      <label for="text" class="col-form-label">Search:</label>
+    </div>
+    <div class="col-auto">
+      <input
+        type="text"
+        id="searchBrewary"
+        class="form-control"
+        [(ngModel)]="term"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="row">
+    <div class="col" *ngFor="let place of dataListOfBreweries | filter: term">
+      <app-brewery-place [singleBrewery]="place"></app-brewery-place>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="card text-bg-dark mb-3 mt-5 fs-3" style="max-width: 30rem">
+  <div class="card-header">{{ singleBrewery.name }}</div>
+  <hr />
+
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ singleBrewery.website_url.slice(7, singleBrewery.website_url.length) }}
+    </h5>
+    <p class="card-text">State: {{ singleBrewery.state }}</p>
+    <p class="card-text">Country: {{ singleBrewery.country }}</p>
+    <p class="card-text">Province: {{ singleBrewery.county_province }}</p>
+    <p class="card-text">
+      City: {{ singleBrewery.postal_code }},{{ singleBrewery.city }}
+    </p>
+    <p class="card-text">Brewery type: {{ singleBrewery.brewery_type }}</p>
+    <p class="card-text">Phone: {{ singleBrewery.phone }}</p>
+  </div>
+</div>

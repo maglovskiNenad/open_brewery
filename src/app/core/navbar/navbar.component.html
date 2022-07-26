@@ -1,0 +1,42 @@
+<nav
+  class="navbar navbar-expand-lg fs-3"
+  [ngStyle]="{ 'background-color': ' #cca300' }"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand nav-link disabled" href="#" aria-disabled="true"
+      >Brewery</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/home']"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/brewery']">Open Brewery</a>
+        </li>
+      </ul>
+      <span class="d-flex" role="icon">
+        <img src="assets/images/beer-img.png" class width="100%" />
+      </span>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="row g-4 align-items-center">
+    <div class="col-auto">
+      <label for="search" class="col-form-label fs-4 text-break text-center"
+        >Feel free to browse the breweries you are interested in, just be
+        careful the list is too big.
+        <p class="fs-6 text-center">
+          Examples that can help you are: dog, mugs, hog, green, seal...
+        </p></label
+      >
+    </div>
+    <form>
+      <div class="row">
+        <div class="col-auto">
+          <input
+            type="text"
+            id="searchBrewary"
+            class="form-control"
+            name="breweryName"
+            [(ngModel)]="breweryName"
+            [value]="breweryName"
+          />
+        </div>
+        <div class="col-auto">
+          <button class="btn btn-danger" (click)="onInputChange()">
+            Search
+          </button>
+        </div>
+      </div>
+    </form>
+    <div class="row" *ngIf="showAnotherSearch">
+      <div class="col-auto">
+        <label for="searc"
+          ><small>Search me by name if the list is too long for you:</small>
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          name="searcName"
+          [(ngModel)]="term"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+<div class="row">
+  <div
+    class="col-auto p-1"
+    *ngFor="let item of searchBrewaryData | filter: term"
+  >
+    <div class="card" style="width: 18rem">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ item.name }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
